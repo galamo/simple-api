@@ -30,7 +30,9 @@ app.delete("/country/:name", (req, res, next) => {
     res.status(204).json(data)
 })
 
-app.post("/countries", (req, res, next) => {
+app.post("/country", (req, res, next) => {
+    const d = req.body
+    data.push(d)
     res.json(data)
 })
 
